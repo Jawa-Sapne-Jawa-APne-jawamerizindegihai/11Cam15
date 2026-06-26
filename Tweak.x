@@ -3,7 +3,7 @@
 // Viewfinder UI
 %hook CAMViewfinderViewController
 -(BOOL)_shouldUseZoomControlInsteadOfSlider {
-    return FALSE;
+    return TRUE; //TESTED
 }
 %end
 
@@ -11,16 +11,16 @@
 %hook CAMCaptureCapabilities
 
 // UI & Zoom Controls
--(bool)isZoomPlatterSupported { return FALSE; }
+-(bool)isZoomPlatterSupported { return TRUE; }  //TESTED
 -(long long)zoomDialStyle { return 1; }
 -(bool)allowDynamicShutterZoom { return TRUE; } //TESTED
 -(bool)isExposureSliderSupported { return YES; }
 -(bool)sfCameraFontSupported { return YES; }
 
 // QuickTake & Live Text
--(bool)isCTMSupported { return YES; }
+-(bool)isCTMSupported { return FALSE; }
 -(bool)isCTMSupportSupressed { return NO; }
--(bool)deviceSupportsCTM { return YES; }
+-(bool)deviceSupportsCTM { return FALSE; }
 -(bool)isLivePhotoAutoModeSupported { return TRUE; } //TESTED
 -(bool)isImageAnalysisSupported { return TRUE; }  //TESTED
 -(bool)isImageAnalysisButtonAlwaysVisible { return TRUE; }  //TESTED
