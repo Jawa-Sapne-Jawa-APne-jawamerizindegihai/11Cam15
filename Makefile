@@ -8,7 +8,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = 11Cam15
 11Cam15_FILES = Tweak.x
-11Cam15Mod_FRAMEWORKS = UIKit AVFoundation
+11Cam15Mod_FRAMEWORKS = UIKit AVFoundation Vision CoreImage Photos
 11Cam15_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
