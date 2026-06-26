@@ -70,6 +70,8 @@
 -(bool)isPortraitEffectIntensitySupported { return YES; }
 -(bool)isLivePreviewSupportedForLightingType:(long long)arg1 devicePosition:(long long)arg2 { return YES; }
 -(bool)isDepthEffectApertureSupported { return YES; }
+-(bool)isPortraitEffectIntensitySupported { return YES; }
+-(bool)_backStageLightPortaitEffectsSupported { return YES; }
 -(bool)isHighKeyPortraitSupported { return YES; }
 -(bool)isSoftwareDepthSupported { return YES; }
 -(bool)isMonocularDepthSupported { return YES; }
@@ -120,3 +122,23 @@
 -(float)maxPortraitLightingEffectStrength { return 100; }
 -(float)defaultPortraitLightingEffectStrength { return 50; }
 %end
+
+%hook PUPhotoEditPortraitToolController
+- (bool)canResetToDefaultValue {
+	return YES;
+}
+- (bool)_canRenderPortraitEffect {
+	return YES;
+}
+%end
+
+%hook PUPhotoEditProtoSettings
+- (bool)alwaysShowPortraitV2 {
+	return YES;
+}
+%end
+
+%ctor {
+	%init;
+}
+
