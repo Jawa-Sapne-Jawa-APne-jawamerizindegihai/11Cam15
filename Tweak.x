@@ -7,6 +7,12 @@
 }
 %end
 
+-(bool)isQuickVideoConfigurationSupported {
+    return YES;
+}
+-(bool)isQuickVideoConfigurationSupportedForMode:(long long)arg1 device:(long long)arg2 {
+    return YES;
+}
 
 %hook CAMCaptureCapabilities
 -(bool)isZoomPlatterSupported                      { return YES; }
