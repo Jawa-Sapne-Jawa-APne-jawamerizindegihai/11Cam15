@@ -23,7 +23,7 @@
 -(bool)deviceSupportsCTM { return YES; }
 -(bool)isLivePhotoAutoModeSupported { return TRUE; } //TESTED
 -(bool)isImageAnalysisSupported { return TRUE; }  //TESTED
--(bool)isImageAnalysisButtonAlwaysVisible { return FALSE; }  //TESTED
+-(bool)isImageAnalysisButtonAlwaysVisible { return TRUE; }  //TESTED
 
 // Over Capture (Spatial View Outside the Frame)
 -(bool)isSpatialOverCaptureSupported { return TRUE; }   //TESTED
